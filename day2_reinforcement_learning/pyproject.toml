@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "day2_reinforcement_learning"
+version = "0.1.0"
+description = ""
+authors = ["nisheetpatel <nisheet.pat@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "part1_rl_basics" },
+    { include = "part2_fitting_rl_models" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.0.0"
+ruff = "^0.5.1"
+scipy = "^1.14.0"
+matplotlib = "^3.9.1"
+seaborn = "^0.13.2"
+gymnasium = {extras = ["box2d"], version = "^0.29.1"}
+ipython = "^8.26.0"
+ipykernel = "^6.29.5"
+pytest = "^8.2.2"
+tqdm = "^4.66.4"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
