@@ -10,15 +10,13 @@ In this tutorial, we are going to explore two key RL concepts: the environment a
 
 We will start with a simple gridworld-like environment, `FrozenLake-v1`, and two agents: a `RandomAgent` and a `QLearningAgent`. By following the standardized approach, we will see how our agents naturally extend to another classic control environment, `CartPole-v1`.
 
-1. **Exploring the Environment:** 
+- **Exploring the Environment:** 
   - We will initialize the environment and explore its observation and action spaces.
   - Understanding these is key to successfully training an RL agent.
-
-2. **Training a Random Agent:** 
+- **Training a Random Agent:** 
   - We will start with a `RandomAgent`, which chooses actions randomly from the action space. 
   - This will serve as a baseline and help us understand the environment dynamics.
-
-3. **Training a Q-Learning Agent:** 
+- **Training a Q-Learning Agent:** 
   - Next, we will train a `QLearningAgent`, which uses the Q-Learning algorithm to learn from its experiences and improve its policy over time.
 
 The interactive nature of this tutorial allows you to see the RL process in action and understand the roles of the environment and the agent, as well as the interaction between them.
