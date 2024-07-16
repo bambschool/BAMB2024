@@ -15,6 +15,7 @@ class CartPoleEnvironment:
     def __init__(self, render_mode="rgb_array"):
         self.env = gym.make("CartPole-v1", render_mode=render_mode)
         self.observation_shape = (20, 20, 20, 20)
+        self.state_space_size = np.prod(self.observation_shape)
         self.action_space = self.env.action_space
         self.bins = self._create_bins()
 
@@ -36,7 +37,7 @@ class CartPoleEnvironment:
     def _get_discrete_state(self, state):
         discrete_state = tuple(np.digitize(state[i], self.bins[i]) for i in range(4))
         # print(f"Continuous state: {state}, Discrete state: {discrete_state}")
-        return discrete_state
+        return np.ravel_multi_index(discrete_state, self.observation_shape)
 
     def reset(self):
         state, _ = self.env.reset()
