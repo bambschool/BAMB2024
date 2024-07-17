@@ -17,5 +17,7 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
     - [Overview](./day2_reinforcement_learning/part1_rl_basics/README.md)
     - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part1_rl_basics/tutorial_2a.ipynb)
   - Part 2: Fitting RL models to behavior:
-    - [Overview](./day2_reinforcement_learning/part2_fitting_rl_models/README.md)
-    - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part2_fitting_rl_models/tutorial_2B_RL_instructions.ipynb)
+    - [Slides](./slides_lectures/BAMB2024_2B_fitting_RL_models.pdf)
+    - Colab notebooks:
+      - Instructions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part2_fitting_rl_models/tutorial_2B_RL_instructions.ipynb)
+      - Solutions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part2_fitting_rl_models/tutorial_2B_RL_solutions.ipynb)
