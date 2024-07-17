@@ -6,7 +6,6 @@ Welcome to the BAMB 2024 tutorial for the reinforcement learning module. The tut
    - Intro to structuring your RL agents and environments properly by following [gym API standards](https://github.com/Farama-Foundation/Gymnasium?tab=readme-ov-file#api)
    - Intro to RL algorithms in their simplest, tabular form
    - Extending them to classic control environments such as [CartPole](https://gymnasium.farama.org/environments/classic_control/cart_pole/)
-   - Brief intro to DeepRL
 2. [Fitting RL models to behavior](./part2_fitting_rl_models/)
    - Refresher: Basics of model fitting, selection, and recovery
    - Math: How to properly calculate likelihood for RL models

@@ -1,5 +1,5 @@
-from part1_rl_basics.agents import Agent
-from part1_rl_basics.environments import Environment
+from agents import Agent
+from environments import Environment
 
 def train_agent(agent: Agent, env: Environment, num_episodes: int = 6_000) -> list:
     """Train a RL agent in an Environment."""
