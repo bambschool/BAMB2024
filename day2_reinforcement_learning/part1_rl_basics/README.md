@@ -2,7 +2,7 @@
 
 Welcome to the first part of our interactive Reinforcement Learning (RL) tutorial. This tutorial is designed to provide an introduction to RL concepts by hands-on learning and experimentation.
 
-You will be working with the [`tutorial_2a.ipynb`](./tutorial_2a.ipynb) - the jupyter notebook with all instructions and code. Although you don't need to know and understand it, feel free to look at the helper code present in [`agents.py`](./agents.py), [`environments.py`](./environments.py), [`simulate.py`](./simulate.py), and [`plotting.py`](./plotting.py).
+You will be working with the [`tutorial_2a.ipynb`](./tutorial_2a.ipynb) - the jupyter notebook with all instructions and code. Although you don't need to know and understand it, feel free to look at the helper code present in [`agents.py`](./agents.py), [`environments.py`](./environments.py), [`simulate.py`](./simulate.py), and [`plots.py`](./plots.py).
 
 ## Overview
 
