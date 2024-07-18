@@ -1,0 +1,22 @@
+data_Haddara_2022_Exp2_pt1to30 is the first 30 participants from: https://doi.org/10.1177/09567976211032887
+
+column headers:
+0. Subj_idx	- 1 to 30 labels the participant
+1. Stimulus	- 1 or 2 (which stimulus was presented)
+2. Response	- 1 or 2 (which choice the participant made)
+3. Confidence	- 1 to 4 (rating, 1 = low confidence, 4 = high)
+4. RT_dec	- reaction time for the response
+5. RT_conf	- reaction time for confidence rating
+6. Day	- 1 to 6 (which day/session)
+7. Feedback - 1 or 0 between subjects conditions
+
+data_mazancieux_2018 is the data from: https://doi.org/10.1037/xge0000746
+
+column headers:
+0. Subj_idx	- 1 to 181 labels the participant
+1. Stimulus	- 1 or 2 (which stimulus was presented)
+2. Response	- 1 or 2 (which choice the participant made)
+3. Confidence	- 0 to 10 (rating)
+4. RT_decision	- reaction time for the response
+5. RT_confidence	- reaction time for confidence rating
+6. Task - EF (executive function), EM (Episodic memory), SM (semantic memory), VP (visual perception)
