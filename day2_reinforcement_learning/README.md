@@ -24,6 +24,8 @@ We use [Poetry](https://python-poetry.org/), a modern python packaging and depen
 ```sh
 # clone the BAMB2024 git repository if you don't already have it
 gh repo clone bambschool/BAMB2024
+# if you don't have gh installed, use the git clone command below
+# git clone https://github.com/bambschool/BAMB2024.git
 
 # jump into the folder for this tutorial
 cd BAMB2024/day2_reinforcement_learning/
