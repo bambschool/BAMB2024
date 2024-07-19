@@ -34,3 +34,6 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
     - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Instructions.ipynb#scrollTo=yugIvo_6cYpg)
     - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Solutions.ipynb)
     - [Slides](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/BAMB_bayes_tutorial_part2.pdf)
+
+  - Part 3: Simulation-based inference: [Tutorial](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/SBI_Fitting_mixed_behaviora_data.ipynb
+) [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/SBI_Fitting_mixed_behaviora_data.ipynb)
