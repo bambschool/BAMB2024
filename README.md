@@ -28,7 +28,9 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
   - Part 1: Introduction and Bayesian Brain
     - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part1_Instructions.ipynb)
     - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part1_Solutions.ipynb)
+    - [Slides](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/BAMB_bayes_tutorial_part1.pdf)
 
   - Part 2: Complex behavior and connections
     - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Instructions.ipynb#scrollTo=yugIvo_6cYpg)
     - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Solutions.ipynb)
+    - [Slides](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/BAMB_bayes_tutorial_part2.pdf)
