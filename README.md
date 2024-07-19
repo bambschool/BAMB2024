@@ -21,3 +21,14 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
     - Colab notebooks:
       - Instructions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part2_fitting_rl_models/tutorial_2B_RL_instructions.ipynb)
       - Solutions [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day2_reinforcement_learning/part2_fitting_rl_models/tutorial_2B_RL_solutions.ipynb)
+
+## Day 3: Bayesian decision-making and model-fitting
+
+- Tutorials
+  - Part 1: Introduction and Bayesian Brain
+    - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part1_Instructions.ipynb)
+    - Solutions: [![Open in Collab](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part1_Solutions.ipynb)
+
+  - Part 2: Complex behavior and connections
+    - Instructions: [![Open in Collab](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Instructions.ipynb#scrollTo=yugIvo_6cYpg)
+    - Solutions: [![Open in Collab](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Solutions.ipynb)
