@@ -43,14 +43,11 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
 
 - Tutorials
   - Part 1: Gaussian mixture models and EM
-    - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204:%20Latent%20variable%20models/mixture-models-EM.ipynb.ipynb)
-    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part1_Solutions.ipynb)
-    - [Slides](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/BAMB_bayes_tutorial_part1.pdf)
+    - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204:%20Latent%20variable%20models/mixture-models-EM.ipynb)
+    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204:%20Latent%20variable%20models/mixture-models-EM_solutions.ipynb)
+    - [Slides](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/Latent_variable_models.pdf)
+    - [Probabilities cheat sheet](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/BAMB_cheat_sheet.pdf)
 
-  - Part 2: Complex behavior and connections
-    - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Instructions.ipynb#scrollTo=yugIvo_6cYpg)
-    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/Bayes_Tutorial_Part2_Solutions.ipynb)
-    - [Slides](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/BAMB_bayes_tutorial_part2.pdf)
-
-  - Part 3: Simulation-based inference: [Tutorial](https://github.com/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/SBI_Fitting_mixed_behaviora_data.ipynb
-) [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%203%3A%20Bayes%20Tutorials/SBI_Fitting_mixed_behaviora_data.ipynb)
+  - Part 2: Hidden Markov models
+    - [Slides](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/Latent_variable_models.pdf)
+    - [Probabilities cheat sheet](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/BAMB_cheat_sheet.pdf)
