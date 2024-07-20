@@ -1,1 +1,184 @@
+2 experiments: C is experiment 1, D is experiment 2A
+Experiments contain participants with the same number identifier (there are two participant 10s)
+
+Experiment C has no rule (column is empty)
+Experiment D always has rule 1 only (the data for the other rule were put in experiment 2B, not available online)
+
+Participants perform 576 trials in blocks of 72 trials = 8 blocks total
+Blocks are labeled 1:4 in the data (each participant has 2 blocks labelled 1, one for task 1 and one for task 2)
+
+column 1: row number (?) 
+column 2 (index): trial index for each participant by half-exp (0:287 x2)
+column 3 (exp): C is experiment 1, D is experiment 2A
+column 4 (rule): empty for exp C, 1 for exp D (experiment 2B had another rule, where the category changed each trial, but that data is not included here)
+column 5 (subj): number identifier of the participant (repeats across exp C and D)
+column 6 (task): 1 = uncontrollable (C-) condition; 2 = controllable (C+) condition
+column 7 (block_ind): 1:4 x2 (each subject does 8 blocks, 4 for C+ and 4 for C-)
+column 8 (mu): mean of von mises / circular gaussian
+column 9 (kappa): concentration (inverse variance) of von mises / circular gaussian
+column 10 (confidence_before): confidence from the previous trial
+column 11 (confidence_after): confidence on the current trial
+column 12 (response_before): response on the previous trial
+column 13 (response_after): response on the current trial
+column 14 (sequence_direction): the true category (for D, 1 is mu=0, 2 is mu=1.5708; for C there appears to be some rotation that makes this non-systematic)
+column 15 (sequence_index): restarts each block
+column 16 (sample_angle): the orientation presented (in radians)
+column 17 (sample_log_likelihood_ratio): the log likelihood ratio in favour of sequence_direction = 1
+
+correct response is sequence_direction (boolean iscorrect = response_after == sequence_direction)
+
+For confidence: 2 = high confidence, 1 = low confidence
+
+In experiment C, the categories were rotated randomly, so the means (mu) differ, the log likelihood ratio is correct irrespective of the rotation
+
+To recreate the log likelihood ratio:
+
+llr = kappa*cos(2*(x-theta(2)) - kappa*cos(2*(2-theta(1))
+
+kappa is the concentration (column 9)
+x is the orientation in radians (column 16)
+theta is based on mu (column 8): 
+
+for experiment D theta = [0,pi/2]
+for experiment D theta is one of (but sometimes in the reverse order):
+[0.1963,1.7671] 
+[0.5890,2.1598] 
+[0.9817,2.5525]
+[1.3744,2.9452]
+
+
+
+Some helpful equations
+
+von mises probability distribution: (1/(2*pi*besseli(0,kappa)))*exp(kappa*cos((x-mu)));
+variance of von mises: (1-(besseli(1,kappa)./besseli(0,kappa))); 
+log-likelihood: kappa*cos(2*(x-mu))
+likelihood + prior: x = x+log((1-h)./h+exp(-x))-log((1-h)./h+exp(+x)); (h is the perceived hazard rate)
+
+sum of gaussians: X~N(mu1,var1), y~N(mu2,var2), Z = X+Y; Z~N(mu1+mu2,var1+var2) (var = sd*sd; sd = sqrt(var))
+
+matlab code for model (with some extra comments):
+
+function [rbef,raft,cbef,caft,psmp] = sim_r(h,sinf,ssel,scnf,tcnf,gcnf)
+
+	% input:
+	% h = perceived hazard rate
+	% sinf = standard deviation of inference noise (gaussian distributed) 
+	% ssel = standard deviation of selection noise (gaussian distributed)
+	% scnf = standard deviation of confidence noise (gaussian distributed)
+	% tcnf = confidence threshold / criterion (what value of confidence evidence demarcates low from high confidence rating responses)
+	% gcnf = parameter for confidence gain during switches
+
+	% inference noise vs selection noise: inference noise is applied to each sample (orientation presented), selection noise is applied once per sequence (trial). So a sequence with 2 samples (trial with 2 orientations) has 3 samples of noise; 4 orientations presented mean 5 samples of noise; 8 orientations presented means 9 samples of noise.
+
+	% in general seq refers to sequence (the sequence of presented orientations in a trial), so nseq is the number of trials and iseq would refer to the current trial (while looping)
+	% smp refers to sample, as in the orientation in the sequence, nsmp is either 2, 4, 8 depending on the trial
+	% rbef = response before (previous trial), raft = response after (current trial); cbef = confidence before (previous...
+
+        % simulate responses
+        xt = zeros(nseq,nsmp); % log-belief
+        rbef = nan(nseq,nsmp); % response before sequence
+        raft = nan(nseq,nsmp); % response after sequence
+        cbef = nan(nseq,nsmp); % confidence before sequence
+        caft = nan(nseq,nsmp); % confidence after sequence
+        psmp = ones(nseq,1); % fraction of propagated samples
+
+
+        for iseq = 1:nseq
+
+            % set state before sequence
+            if seqind(iseq) > 1
+
+                % set response before sequence
+                rbef(iseq,:) = raft(iseq-1,:);
+
+                if fitcnf
+                    % set confidence before sequence
+                    cbef(iseq,:) = caft(iseq-1,:);
+                end
+
+            else % 1st trial of each block
+
+                % use same response as subject
+                rbef(iseq,:) = cfg.rbef(iseq);
+
+                if fitcnf
+                    % use same confidence as subject
+                    cbef(iseq,:) = cfg.cbef(iseq);
+                end
+
+            end
+
+
+            % update log-belief
+            if seqind(iseq) > 1
+                xt(iseq,:) = upfun(xt(iseq-1,:),h);
+            end
+
+            xt(iseq,:) = normrnd(xt(iseq,:)+seqllr(iseq),sqrt(seqlen(iseq))*sinf);
+
+
+            % apply selection noise
+            xr = normrnd(xt(iseq,:),ssel);
+
+
+            % compute response
+            raft(iseq,:) = 1+(xr < 0);
+
+
+            if fitcnf
+
+                % compute log-belief in favor of response
+                xc = xt(iseq,:).*(3-2*raft(iseq,:));
+
+                % apply confidence gain during switches
+                iswi = raft(iseq,:) ~= rbef(iseq,:);
+                xc(iswi) = xc(iswi)*gcnf;
+
+                % apply confidence noise
+                xc = normrnd(xc,scnf);
+
+                % compute confidence
+                caft(iseq,:) = 1+(xc > tcnf);
+
+                if resamp % resample log-belief
+                    ires = ...
+                        raft(iseq,:) == cfg.raft(iseq) & ...
+                        caft(iseq,:) == cfg.caft(iseq);
+                    psmp(iseq) = mean(ires);
+
+                    if any(ires)
+                        % bootstrap resample
+                        xt(iseq,:) = xt(iseq,randsample(find(ires),nsmp,true));
+                    else
+                        xt(iseq,:) = 0;
+                    end
+
+                end
+
+            else
+                if resamp % resample log-belief
+
+                    ires = raft(iseq,:) == cfg.raft(iseq);
+                    psmp(iseq) = mean(ires);
+
+                    if any(ires)
+                        % bootstrap resample
+                        xt(iseq,:) = xt(iseq,randsample(find(ires),nsmp,true));
+                    else
+                        xt(iseq,:) = 0;
+                    end
+                end
+            end
+        end
+    end
+ 
+
+ 
+end
+ 
+function [x] = upfun(x,h)
+% update log-belief
+x = x+log((1-h)./h+exp(-x))-log((1-h)./h+exp(+x));
+end
 
