@@ -50,6 +50,6 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
 
   - Part 2: Hidden Markov models
     - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204%3A%20Latent%20variable%20models/hidden-markov-models.ipynb)
-    - Solutions: [![Open in Collab](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204%3A%20Latent%20variable%20models/hidden-markov-models_solutions.ipynb#scrollTo=9a002045)
+    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204%3A%20Latent%20variable%20models/hidden-markov-models_solutions.ipynb#scrollTo=9a002045)
     - [Slides](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/Latent_variable_models.pdf)
     - [Probabilities cheat sheet](https://github.com/bambschool/BAMB2024/blob/741fe7ce3140fc1afbe3aa4457338b7c945dc95c/slides_lectures/BAMB_cheat_sheet.pdf)
