@@ -59,5 +59,5 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
 - Tutorials
   - Parts 1-4: Simulating and fitting the DDM
     - Instructions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day5_ddm/bamb_tutorial5_ddm.ipynb)
-    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%204:%20Latent%20variable%20models/mixture-models-EM.ipynb)
+    - Solutions: [![Open in Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/day5_ddm/bamb_tutorial5_ddm_solutions.ipynb)
     - [Slides](https://github.com/bambschool/BAMB2024/blob/949cd0358f8abfe10c0f8edcee0fa4ad5f6e1b43/day5_ddm/BAMB_ddm_tutorial.pdf)
