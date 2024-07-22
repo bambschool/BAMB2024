@@ -1,6 +1,11 @@
 from typing import Protocol
 import numpy as np
 import gymnasium as gym
+from gymnasium import spaces
+from minigrid.core.grid import Grid
+from minigrid.core.mission import MissionSpace
+from minigrid.core.world_object import Goal
+from minigrid.minigrid_env import MiniGridEnv
 
 
 class Environment(Protocol):
@@ -53,3 +58,86 @@ class CartPoleEnvironment:
 
     def close(self):
         self.env.close()
+
+
+class CustomGridEnv(MiniGridEnv):
+    def __init__(
+        self,
+        agent_start_pos=(1, 1),
+        goal_pos=(98, 98),
+        size=100,
+        max_steps=1000,
+        render_mode="rgb_array"
+    ):
+        self.agent_start_pos = agent_start_pos
+        self.goal_pos = goal_pos
+        self.size = size
+
+        mission_space = MissionSpace(mission_func=self._gen_mission)
+
+        super().__init__(
+            mission_space=mission_space,
+            grid_size=size,
+            max_steps=max_steps,
+            render_mode=render_mode,
+        )
+
+        # Override action space to include 9 actions
+        self.action_space = spaces.Discrete(9)
+
+        # Define the state space size
+        self.state_space_size = size * size
+
+    @staticmethod
+    def _gen_mission():
+        return "Reach the goal"
+
+    def _gen_grid(self, width, height):
+        self.grid = Grid(width, height)
+
+        # Place the agent
+        self.agent_pos = self.agent_start_pos
+        self.agent_dir = 0  # Facing right
+
+        # Place the goal
+        self.put_obj(Goal(), *self.goal_pos)
+
+        self.mission = self._gen_mission()
+
+    def _get_state(self):
+        return self.agent_pos[0] * self.size + self.agent_pos[1]
+
+    def step(self, action):
+        self.step_count += 1
+
+        direction = [
+            (0, 0), (1, 0), (1, 1), (0, 1), (-1, 1),
+            (-1, 0), (-1, -1), (0, -1), (1, -1)
+        ]
+
+        new_pos = (
+            self.agent_pos[0] + direction[action][0],
+            self.agent_pos[1] + direction[action][1]
+        )
+
+        if 0 <= new_pos[0] < self.width and 0 <= new_pos[1] < self.height:
+            self.agent_pos = new_pos
+
+        done = np.array_equal(self.agent_pos, self.goal_pos)
+        reward = 1 if done else 0
+
+        state = self._get_state()
+
+        return state, reward, done, False, {}
+
+    def reset(self, seed=None, options=None):
+        super().reset(seed=seed, options=options)
+        self.agent_pos = self.agent_start_pos
+        state = self._get_state()
+        return state, {}
+
+# Register the environment
+gym.envs.registration.register(
+    id='CustomGrid-v0',
+    entry_point=CustomGridEnv,
+)
