@@ -53,7 +53,7 @@ Some helpful equations
 von mises probability distribution: (1/(2*pi*besseli(0,kappa)))*exp(kappa*cos((x-mu)));
 variance of von mises: (1-(besseli(1,kappa)./besseli(0,kappa))); 
 log-likelihood: kappa*cos(2*(x-mu))
-likelihood + prior: x = x+log((1-h)./h+exp(-x))-log((1-h)./h+exp(+x)); (h is the perceived hazard rate)
+prior: x = x+log((1-h)./h+exp(-x))-log((1-h)./h+exp(+x)); (h is the perceived hazard rate)
 
 sum of gaussians: X~N(mu1,var1), y~N(mu2,var2), Z = X+Y; Z~N(mu1+mu2,var1+var2) (var = sd*sd; sd = sqrt(var))
 
