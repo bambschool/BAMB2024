@@ -22,9 +22,9 @@ In this tutorial we will learn how to use recurrent neural networks (RNNs) to so
 
 - [Lecture slides]()
 - [Tutorial slides]()
-- [Tutorial instructions: RNNs](https://github.com/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-instructions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-instructions.ipynb)
 - [Tutorial instructions: Models](https://github.com/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_models-instructions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_models-instructions.ipynb)
 - [Tutorial solutions: Models](https://github.com/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_models-solutions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_models-solutions.ipynb)
+- [Tutorial instructions: RNNs](https://github.com/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-instructions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-instructions.ipynb)
 - [Tutorial solutions: RNNs](https://github.com/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-solutions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bambschool/BAMB2024/blob/main/Day%206%3A%20Neural%20Networks/tutorial_4_RNNs-solutions.ipynb)
 - [NeuroGym](https://neurogym.github.io/)
 - [PyTorch](https://pytorch.org/)
