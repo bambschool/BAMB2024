@@ -65,7 +65,7 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
 ## Day 6: Neural Networks
 
 
-# Part I: Feedforward models
+#### Part I: Feedforward models
 
  In the first part of the tutorial, we will learn how to use Perceptron and Multi-Layer Perceptron (MLP) neural networks to solve simple classification tasks. We will walk through the necessary steps to implement and train these networks using PyTorch. Here is the index:
  
@@ -78,7 +78,7 @@ Tutorials for each day of BAMB! 2024. Each folder contains two tutorial versions
 - Playing
 
 
-# Part II: Recurrent Neural Networks
+#### Part II: Recurrent Neural Networks
 
 In the second part of the tutorial we will learn how to use recurrent neural networks (RNNs) to solve a Perceptual Decision Making task. Here is the index:
 
