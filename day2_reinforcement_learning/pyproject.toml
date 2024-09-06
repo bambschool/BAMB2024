@@ -21,7 +21,6 @@ ipython = "^8.26.0"
 ipykernel = "^6.29.5"
 pytest = "^8.2.2"
 tqdm = "^4.66.4"
-jupyter = "^1.0.0"
 
 
 [build-system]
