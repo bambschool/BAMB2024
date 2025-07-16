@@ -28,7 +28,7 @@ class Dataset(object):
                  batch_first=False, cache_len=None):
         if env_kwargs is None:
             env_kwargs = {}
-        env = gym.make(env, **env_kwargs)
+        env = ngym.make(env, **env_kwargs)
         env.reset()
         self.env = env
         self.seed()
